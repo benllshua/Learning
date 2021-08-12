@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/store.css" />
+    <link rel="stylesheet" href="../styles/addProductPopup.css" />
+    <link rel="stylesheet" href="../styles/filterPopup.css" />
+    <link rel="stylesheet" href="../styles/globals.css" />
+    <script defer src="../assets/fonts/fontAwesome/all.min.js"></script>
+    <title>מונשרי - חנות</title>
+  </head>
+  <body>
+    <button class="open-add-wine-modal" onclick="OpenAddProductForm()">
+      <i class="fas fa-plus"></i>
+    </button>
+    <div class="navbar">
+      <a href="/pages/index.html">
+        <i class="fas fa-home"></i>
+        <span>בית</span>
+      </a>
+      <a href="/pages/login.html">
+        <i class="fas fa-user-circle"></i>
+        <span>משתמש</span>
+      </a>
+      <a href="/pages/store.html">
+        <i class="fas fa-shopping-cart"></i>
+        <span>חנות</span>
+      </a>
+      <a href="/pages/branches.html">
+        <i class="fas fa-compass"></i>
+        <span>סניפים</span>
+      </a>
+      <a href="/pages/events.html">
+        <i class="fas fa-wine-bottle"></i>
+        <span>אירועים</span>
+      </a>
+      <a href="/pages/gallery.html">
+        <i class="fas fa-images"></i>
+        <span>גלריה</span>
+      </a>
+    </div>
+
+    <main>
+      <div id="search-container">
+        <input type="search" name="wineSearch" id="wineSearchInput" placeholder="חיפוש" />
+        <button id="open-filter-modal" onclick="OpenFilterForm()">הוסף מסנן</button>
+        <div id="filterPills"></div>
+      </div>
+
+      <div class="wine-section">
+        <div>
+          <h2>יינות לבנים</h2>
+          <div class="slide-container">
+            <div class="cards-container" id="whiteWineContainer"></div>
+          </div>
+        </div>
+        <div>
+          <h2>יינות אדומים</h2>
+          <div class="slide-container">
+            <div class="cards-container" id="redWineContainer"></div>
+          </div>
+        </div>
+        <div>
+          <h2>בירות</h2>
+          <div class="slide-container">
+            <div class="cards-container" id="BeerContainer"></div>
+          </div>
+        </div>
+        <div>
+          <h2>אחר</h2>
+          <div class="slide-container">
+            <div class="cards-container" id="OtherContainer"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="add-product-popup-overlay" onclick="CloseAddProductForm()"></div>
+    <div class="add-product-popup">
+      <div class="add-product-popup-close" onclick="CloseAddProductForm()">
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="add-product-form">
+        <div class="avatar">
+          <img src="../assets/svgs/image-upload-animate.svg" alt="add wine" />
+        </div>
+        <h1 class="header">הוסף מוצר</h1>
+        <div class="element">
+          <label for="productTypeInput">סוג מוצר</label>
+          <select name="productType" id="productTypeInput">
+            <option value="other">אחר</option>
+            <option value="white">יין לבן</option>
+            <option value="red">יין אדום</option>
+            <option value="beer">בירה</option>
+          </select>
+        </div>
+        <div class="element">
+          <label for="productNameInput">שם מוצר</label>
+          <input type="text" id="productNameInput" />
+        </div>
+        <div class="element">
+          <label for="productCostInput">מחיר</label>
+          <input type="number" min="0" id="productCostInput" />
+        </div>
+        <div class="element">
+          <label for="productYearInput">שנה (לא חובה)</label>
+          <input type="number" min="1800" id="productYearInput" />
+        </div>
+        <div class="element">
+          <label for="productImageInput">תמונה (לא חובה)</label>
+          <input type="file" id="productImageInput" />
+        </div>
+        <div class="element">
+          <label for="productDescriptionInput">תיאור</label>
+          <input type="text" id="productDescriptionInput" />
+        </div>
+        <div class="checkboxElement">
+          <input type="checkbox" id="saveProductInput" />
+          <label for="saveProductInput">שמור</label>
+        </div>
+        <div class="element">
+          <button onclick="AddNewProduct()">הוסף</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-popup-overlay" onclick="CloseFilterForm()"></div>
+    <div class="filter-popup">
+      <div class="filter-popup-close" onclick="CloseFilterForm()">
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="filter-form">
+        <div class="avatar">
+          <img src="../assets/svgs/Customer Survey-rafiki.svg" alt="add wine" />
+        </div>
+        <h1 class="header">סנן</h1>
+        <div class="element">
+          <label for="productTypeInput">לפי</label>
+          <select name="filterType" id="filterTypeInput">
+            <option value="cost">מחיר</option>
+            <option value="year">שנה</option>
+            <option value="includes">מכיל</option>
+          </select>
+        </div>
+        <div class="element" id="filterActionSelectContainer">
+          <select name="filterAction" id="filterActionInput">
+            <option value="smaller">קטן מ...</option>
+            <option value="bigger">גדול מ...</option>
+            <option value="equel">שווה ל...</option>
+          </select>
+        </div>
+        <div class="element">
+          <input type="text" id="filterValueInput" />
+        </div>
+
+        <div class="element">
+          <button onclick="AddFilter()">הוסף סנן</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../data/products.js"></script>
+  <script src="../javascript/storeAdd.js"></script>
+  <script src="../javascript/storeSearch.js"></script>
+  <script src="../javascript/storeFilter.js"></script>
+  <script src="../javascript/store.js"></script>
+</html>

@@ -1,0 +1,212 @@
+body {
+  background-image: url("../assets/images/productBackground.jpg");
+  background-position-x: center;
+  background-position-y: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.open-add-wine-modal {
+  margin: 8px;
+  width: 32px !important;
+  height: 32px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ffffff00;
+  border: none;
+}
+
+.open-add-wine-modal:hover {
+  background-color: #ffffff33;
+}
+
+.open-add-wine-modal > svg {
+  color: #ffffff;
+}
+
+#search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+#search-container * {
+  margin: 8px;
+}
+
+#search-container > button {
+  padding: 8px 24px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-weight: bold;
+  border: none;
+  background-color: #ffffff33;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#filterPills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#filterPills > div {
+  padding: 8px;
+  border-radius: 16px;
+}
+#filterPills > div > button {
+  color: #ffffff;
+  border-radius: 50%;
+}
+#filterPills > div > button:hover {
+  background: #ffffff33;
+}
+#filterPills > div > button > svg {
+  color: white;
+  width: 16px !important;
+  height: 16px;
+}
+
+#wineSearchInput {
+  background-color: #ffffff33;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  color: #ffffffcc;
+  padding: 8px;
+  width: 284px; /*300 - (2*8padding) */
+  font-weight: 500;
+}
+
+#wineSearchInput::placeholder {
+  text-shadow: rgba(31, 38, 135, 0.37) 0px 2px 4px;
+  color: #ffffffcc;
+  font-weight: 500;
+}
+
+.wine-section {
+  display: block;
+  margin: 0 auto;
+  width: 80vw;
+}
+
+.wine-section > div > h2 {
+  color: white;
+}
+
+.slide-container {
+  overflow-x: auto;
+  margin-bottom: 64px;
+}
+
+.cards-container {
+  display: flex;
+  width: fit-content;
+  margin-bottom: 16px;
+}
+
+.slide-container::-webkit-scrollbar {
+  width: 4px;
+  height: 5px;
+}
+
+.slide-container::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid #ffffff00;
+  background: #ffffff99;
+}
+
+.wine-card {
+  background: rgba(153, 153, 153, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+  margin: 8px 24px;
+  position: relative;
+}
+
+.wine-card:hover {
+  transform: scale(1.05);
+}
+
+.wine-card > .cardImg {
+  width: 250px;
+  height: 100px;
+  background-size: cover;
+}
+
+.wine-card > svg {
+  width: 250px !important;
+  height: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-size: cover;
+}
+
+.wine-card-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wine-card-info p {
+  margin: 8px;
+  color: #ffffffcc;
+}
+
+.wine-card-info h5,
+.wine-card-info h3 {
+  margin: 0 8px;
+  color: #ffffff;
+}
+
+.wine-card > p {
+  color: #ffffff99;
+  font-style: italic;
+  margin: 8px;
+}
+
+.wine-card > button {
+  position: absolute;
+  bottom: -8px;
+  left: 8px;
+  padding: 8px 24px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-weight: bold;
+  border: none;
+  background-color: #ffffff33;
+  color: #ffffff;
+}
+
+.wine-card:hover > button {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.wine-card > button:hover {
+  background-color: #ffffff66;
+}
+
+.wine-card > button > svg {
+  margin-right: 8px;
+}
+
+/* -------- laptop & above -------- */
+
+@media screen and (min-width: 1024px) {
+  .wine-card > button {
+    opacity: 0;
+  }
+}

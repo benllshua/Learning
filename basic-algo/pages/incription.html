@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/incription.css" />
+    <link rel="stylesheet" href="../styles/globals.css" />
+    <script defer src="../assets/fonts/fontAwesome/all.min.js"></script>
+    <title>אלגוריתמיקה בסיסית - פולינדרום</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/pages/index.html">
+        <i class="fas fa-home"></i>
+        <span>בית</span>
+      </a>
+      <a href="/pages/polindrom.html">
+        <i class="fas fa-arrows-alt-h"></i>
+        <span>פולינדרום</span>
+      </a>
+      <a href="/pages/incription.html">
+        <i class="fas fa-american-sign-language-interpreting"></i>
+        <span>"הצפנה"</span>
+      </a>
+      <a href="/pages/recursion.html">
+        <i class="fas fa-shapes"></i>
+        <span>רקורסיה בסיסית</span>
+      </a>
+      <a href="/pages/async.html">
+        <i class="fas fa-biohazard"></i>
+        <span>אסינכרוניות</span>
+      </a>
+    </div>
+
+    <main class="incription-page-container">
+      <h1>דף "הצפנה"</h1>
+      <h5>
+        הזן קלט כלשהו באנגלית ומספר <br />
+        בלחיצה על "הצפן" הקלט יהפוך למוצפן - כל אות תקפוץ כמות אותיות אחורה, לפי המספר... <br />
+        בלחיצה על פענח הקלט המוצפן יהפוך להיות הקלט שהוכנס!
+      </h5>
+
+      <input type="text" id="incriptionInput" placeholder="abcdef" />
+      <input type="number" min="1" max="25" value="1" id="incriptionNumber" />
+      <div class="center">
+        <button onclick="IncriptClick()">הצפן</button>
+        <button onclick="DecodeClick()">פענח</button>
+      </div>
+    </main>
+
+    <script src="../javascript/a_zLetters.js"></script>
+    <script src="../javascript/incription.js"></script>
+  </body>
+</html>

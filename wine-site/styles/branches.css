@@ -1,0 +1,9 @@
+body {
+  background-image: url("../assets/images/indexBackground.jpg");
+  background-position-x: center;
+  background-position-y: center;
+}
+
+/* -------- mobile (defult) -------- */
+
+/* -------- tablet & above -------- */

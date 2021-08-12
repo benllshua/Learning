@@ -1,0 +1,56 @@
+.recursion-page-container > * {
+  margin: 16px auto;
+  text-align: center;
+  display: block;
+}
+
+.recursion-page-container > h1 {
+  color: #17d4fe;
+  font-size: 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  text-shadow: 0 8px 32px 0 rgba(214, 255, 245, 0.25);
+  font-weight: 200;
+}
+
+.recursion-page-container > h5 {
+  color: rgb(235, 255, 250);
+  font-weight: 200;
+  font-size: 2rem;
+}
+
+.recursion-page-container > input {
+  background: rgba(214, 255, 245, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 64px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 16px;
+  color: #fff;
+}
+
+#fibonachiOutput {
+  color: #17d4fe;
+  direction: ltr;
+  max-width: 80vw;
+  text-align: start;
+}
+.recursion-page-container label {
+  color: rgb(235, 255, 250);
+  font-weight: 200;
+  margin-left: 8px;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gap {
+  height: 200px;
+}
+
+canvas {
+  border: 1px solid #fff;
+}

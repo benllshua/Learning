@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/recursion.css" />
+    <link rel="stylesheet" href="../styles/globals.css" />
+    <script defer src="../assets/fonts/fontAwesome/all.min.js"></script>
+    <title>אלגוריתמיקה בסיסית - רקורסיה</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/pages/index.html">
+        <i class="fas fa-home"></i>
+        <span>בית</span>
+      </a>
+      <a href="/pages/polindrom.html">
+        <i class="fas fa-arrows-alt-h"></i>
+        <span>פולינדרום</span>
+      </a>
+      <a href="/pages/incription.html">
+        <i class="fas fa-american-sign-language-interpreting"></i>
+        <span>"הצפנה"</span>
+      </a>
+      <a href="/pages/recursion.html">
+        <i class="fas fa-shapes"></i>
+        <span>רקורסיה בסיסית</span>
+      </a>
+      <a href="/pages/async.html">
+        <i class="fas fa-biohazard"></i>
+        <span>אסינכרוניות</span>
+      </a>
+    </div>
+
+    <main class="recursion-page-container">
+      <h1>דף הרקורסיה</h1>
+      <h5>הזן מספר בכדי להציג את n מספרי הפיבונצ'י</h5>
+      <input type="number" min="0" id="recursionInput" />
+      <p id="fibonachiOutput"></p>
+
+      <div class="gap"></div>
+      <h5>משימת המשולשים - הזז את הסליידרים בכדי לקבוע את גודל המשולש וכמות הקומות במבנה</h5>
+      <div class="slider-container">
+        <label for="triangleSizeInput">גודל משולש</label>
+        <input type="range" min="100" max="500" value="100" id="triangleSizeInput" />
+      </div>
+      <div class="slider-container">
+        <label for="heightInput">כמות התכנסויות</label>
+        <input type="range" min="0" max="7" value="0" id="heightInput" />
+      </div>
+      <canvas id="trianglesCanvas" width="500" height="500"></canvas>
+    </main>
+
+    <script src="../javascript/fibonachi.js"></script>
+    <script src="../javascript/triangleRecursion.js"></script>
+  </body>
+</html>

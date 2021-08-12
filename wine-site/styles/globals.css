@@ -1,0 +1,147 @@
+@font-face {
+  font-family: Heebo;
+  font-weight: 100;
+  src: url("../assets/fonts/heebo/Heebo-ExtraLight.ttf");
+}
+@font-face {
+  font-family: Heebo;
+  font-weight: 200;
+  src: url("../assets/fonts/heebo/Heebo-Light.ttf");
+}
+@font-face {
+  font-family: Heebo;
+  font-weight: 300;
+  src: url("../assets/fonts/heebo/Heebo-Thin.ttf");
+}
+@font-face {
+  font-family: Heebo;
+  font-weight: 400;
+  src: url("../assets/fonts/heebo/Heebo-Regular.ttf");
+}
+@font-face {
+  font-family: Heebo;
+  font-weight: 500;
+  src: url("../assets/fonts/heebo/Heebo-Medium.ttf");
+}
+@font-face {
+  font-family: Heebo;
+  font-weight: 600;
+  src: url("../assets/fonts/heebo/Heebo-SemiBold.ttf");
+}
+@font-face {
+  font-family: Heebo;
+  font-weight: 700;
+  src: url("../assets/fonts/heebo/Heebo-Bold.ttf");
+}
+
+/*
+colors:
+
+
+sizes:
+    margin & padding: 
+    small - 8px
+    medium - 16px
+    md - lg - 24px
+    large - 32px
+    big gap - costume
+
+font: Heebo
+
+
+
+*/
+
+* {
+  outline: hidden !important;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: Heebo, "Heebo", sans-serif;
+  direction: rtl;
+  transition: 0.25s ease-in;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.hide,
+.hide * {
+  display: none !important;
+}
+
+.danger {
+  border: 1px solid red !important;
+}
+
+input:focus {
+  border: none !important;
+  outline: none !important;
+}
+
+/* navbar */
+
+.navbar {
+  background: rgba(153, 153, 153, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  top: 32px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 80vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  position: fixed;
+  z-index: 99;
+}
+main {
+  padding-top: 150px;
+}
+
+.navbar > a {
+  color: white;
+  height: 100%;
+  width: 100%;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.navbar > a:hover {
+  background-color: #ffffff66;
+}
+
+.navbar > a > i {
+  color: white;
+}
+
+.navbar > a > span {
+  color: white;
+}
+.navbar > a:nth-child(5),
+.navbar > a:nth-child(6) {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar > a:nth-child(5) {
+    display: flex;
+  }
+}
+
+/* -------- laptop & above -------- */
+
+@media screen and (min-width: 1024px) {
+  .navbar > a:nth-child(6) {
+    display: flex;
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/async.css" />
+    <link rel="stylesheet" href="../styles/loadingAnimation.css" />
+    <link rel="stylesheet" href="../styles/globals.css" />
+    <script defer src="../assets/fonts/fontAwesome/all.min.js"></script>
+    <title>אלגוריתמיקה בסיסית - אסינכרוניות</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/pages/index.html">
+        <i class="fas fa-home"></i>
+        <span>בית</span>
+      </a>
+      <a href="/pages/polindrom.html">
+        <i class="fas fa-arrows-alt-h"></i>
+        <span>פולינדרום</span>
+      </a>
+      <a href="/pages/incription.html">
+        <i class="fas fa-american-sign-language-interpreting"></i>
+        <span>"הצפנה"</span>
+      </a>
+      <a href="/pages/recursion.html">
+        <i class="fas fa-shapes"></i>
+        <span>רקורסיה בסיסית</span>
+      </a>
+      <a href="/pages/async.html">
+        <i class="fas fa-biohazard"></i>
+        <span>אסינכרוניות</span>
+      </a>
+    </div>
+
+    <main class="async-page-container">
+      <h1>פונקציות אסינכרוניות</h1>
+      <h5>הזן קלט ולחץ על כפתור, חכה שתי שניות ותראה את הקסם קורה</h5>
+      <input type="text" id="asyncInput" />
+      <section class="container hide" id="waitingAnim">
+        <div class="pulse"></div>
+        <div class="pulse"></div>
+        <div class="pulse"></div>
+        <div class="pulse"></div>
+        <div class="pulse"></div>
+        <div class="pulse"></div>
+        <div class="pulse"></div>
+        <div class="pulse"></div>
+        <div class="pulse"></div>
+        <div class="pulse"></div>
+        <div class="pulse"></div>
+        <div class="pulse"></div>
+        <div class="pulse"></div>
+        <div class="pulse"></div>
+        <div class="pulse"></div>
+        <div class="pulse"></div>
+        <div class="pulse"></div>
+        <div class="pulse"></div>
+        <div class="pulse"></div>
+        <div class="pulse"></div>
+      </section>
+      <div class="missions-cards">
+        <div class="mission-card">
+          <button id="mission1button">משימה 1</button>
+          <p>בלחיצה על הכפתור יתווסף לקלט "message info:" לאחר 2 שניות</p>
+        </div>
+        <div class="mission-card">
+          <button id="mission2button">משימה 2</button>
+          <p>אם הקלט הוא good הקלט יהפוך לok לאחר 2 שניות, אחרת יהפןך להודעת שגיאה</p>
+        </div>
+        <div class="mission-card">
+          <button id="mission3button">משימה 3</button>
+          <div class="card-number-input">
+            <input type="number" id="mission3FirstNumber" />
+            <input type="number" id="mission3SecondNumber" />
+          </div>
+          <p>הזן 2 מספרים, לאחר 2 שניות מלחיצה הפונקציה תחזיר מי יותר גדול</p>
+        </div>
+      </div>
+    </main>
+    <script src="../javascript/async.js"></script>
+  </body>
+</html>

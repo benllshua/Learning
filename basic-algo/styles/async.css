@@ -1,0 +1,104 @@
+.async-page-container > * {
+  margin: 16px auto;
+  text-align: center;
+  display: block;
+}
+
+.async-page-container > h1 {
+  color: #17d4fe;
+  font-size: 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  text-shadow: 0 8px 32px 0 rgba(214, 255, 245, 0.25);
+  font-weight: 200;
+}
+
+.async-page-container > h5 {
+  color: rgb(235, 255, 250);
+  font-weight: 200;
+  font-size: 2rem;
+}
+
+.async-page-container > img {
+  opacity: 0.7;
+}
+.clock {
+  color: #17d4fe;
+  font-size: 60px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  letter-spacing: 7px;
+  direction: ltr;
+}
+
+.async-page-container > input {
+  background: rgba(214, 255, 245, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 64px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 16px;
+  color: #fff;
+  width: 50vw;
+}
+
+.async-page-container > input:disabled.error {
+  border: 1px solid rgb(255, 0, 0) !important;
+}
+.missions-cards,
+.card-number-input {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.mission-card {
+  background: #17d4fe44;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 16px;
+  color: #fff;
+  width: 260px;
+  margin: 32px;
+}
+
+.mission-card > button {
+  background: rgba(214, 255, 245, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 16px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mission-card > button:hover {
+  transform: scale(1.1);
+  margin-bottom: 16px;
+}
+
+.mission-card > p {
+  text-align: center;
+  vertical-align: middle;
+  margin: 16px;
+}
+
+.card-number-input > input {
+  display: block;
+  margin: 16px auto;
+
+  background: rgba(214, 255, 245, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 4px;
+  color: #fff;
+  width: 60px;
+}

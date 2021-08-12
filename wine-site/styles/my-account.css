@@ -1,0 +1,10 @@
+body {
+  background-image: url("../assets/images/myAccountBackground.jpg");
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+}
+
+/* -------- mobile (defult) -------- */
+
+/* -------- tablet & above -------- */
